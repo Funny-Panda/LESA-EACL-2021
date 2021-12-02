@@ -54,7 +54,7 @@ import tensorflow._api.v2.compat.v1 as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 #print(tf.__version__)
-import tensorflow_hub as hub
+# import tensorflow_hub as hub
 
 # Initialize session
 sess = tf.compat.v1.Session()
@@ -82,7 +82,7 @@ from tensorflow.python.keras.layers import GlobalMaxPool1D, GlobalAveragePooling
 from tensorflow.python.keras.layers import Input, Conv2D, MaxPool2D
 from tensorflow.python.keras.layers.merge import concatenate, average, add
 from tensorflow.python.keras.layers import Reshape, SpatialDropout1D
-from tensorflow.python.keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 from tensorflow.python.keras.models import Model
 from tensorflow.python.keras.layers import Layer, InputSpec
 from tensorflow.python.keras.layers import Lambda
@@ -90,7 +90,7 @@ from tensorflow.python.keras import initializers, regularizers, constraints, opt
 from tensorflow.python.keras import backend as K
 from helper import *
 
-def load_model(maxlen=30, noisy_vocab_size_tag=5363, semi_vocab_size_tag=6137, structured_vocab_size_tag=6048, num_words_dep_noisy=6300, num_words_dep_semi=7300, num_words_dep_structured=7400, num_words_dep_parent_noisy=100, num_words_dep_parent_semi=200, num_words_dep_parent_structured=200)
+def load_model(maxlen=30, noisy_vocab_size_tag=5363, semi_vocab_size_tag=6137, structured_vocab_size_tag=6048, num_words_dep_noisy=6300, num_words_dep_semi=7300, num_words_dep_structured=7400, num_words_dep_parent_noisy=100, num_words_dep_parent_semi=200, num_words_dep_parent_structured=200):
 
     ## LOAD FINE-TUNED BERT MODEL
     cwd = os.getcwd()
